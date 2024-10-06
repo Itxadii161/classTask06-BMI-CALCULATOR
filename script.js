@@ -1,12 +1,12 @@
 // Function that will calculate BMI
 function calculateBMI() {
-    // Get user input values
-    var weight = parseFloat(document.getElementById('weight').value);
-    var height = parseFloat(document.getElementById('height').value);
+    // takes inputs from users
+    var weight = (document.getElementById('weight').value);
+    var height = (document.getElementById('height').value);
     var output = document.getElementById('output');
 
     // checking that the number or input is less than 0 and 
-    if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+    if (weight <= 0 || height <= 0) {
         output.textContent = 'Please enter positive numbers for weight and height.';
         return;
     }
@@ -15,22 +15,19 @@ function calculateBMI() {
     var bmi = weight / (height * height);
     // Round the value to 2 decimal places
     var roundedBMI = bmi.toFixed(2); 
-    let categoryMessage = '';
+    var category = '';
 
-    // Determine BMI category
+    // BMI category based on the calculated BMI:
     if (bmi < 18.5) {
-        categoryMessage = 'Underweight';
+        category = 'Underweight';
     } else if (bmi >= 18.5 && bmi < 24.9) {
-        categoryMessage = 'Normal weight';
+        category = 'Normal weight';
     } else if (bmi >= 25 && bmi < 29.9) {
-        categoryMessage = 'Overweight';
+        category = 'Overweight';
     } else {
-        categoryMessage = 'Obesity';
+        category = 'Obesity';
     }
 
-    // Display result
-    resultDiv.textContent = `Your BMI is ${roundedBMI}. Category: ${categoryMessage}`;
+    // shows output
+    output.textContent = `Your BMI is ${roundedBMI}and your Category is : ${category}`;
 }
-
-// Attach event listener to the button
-document.getElementById('calculate-btn').addEventListener('click', calculateBMI);
