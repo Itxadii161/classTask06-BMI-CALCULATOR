@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -16,10 +17,10 @@
             <!-- <label for="height">Height (m):</label> -->
             HEIGHT: <input type="number" id="height" placeholder="Enter your height in m" required>
         </div>
-        <button id="calculate-btn">Calculate BMI</button>
-        <div class="result" id="result"></div>
+        <button id="calculate-btn" onclick="calculateBMI()">Calculate BMI</button>
+        <div class="result" id="output"></div>
     </div>
 
-    
+    <script src="script.js"></script>
 </body>
 </html>
