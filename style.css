@@ -50,21 +50,31 @@ button:hover {
     text-align: center;
     font-size: 18px;
 }
+
+@media screen and (max-width:500px){
+    .container {
+        width: 50%;
+    }
+    button {
+        margin-left: 2%;
+    }
+    h1 {
+        font-size: large;
+    }
+}
+
 @media screen and (min-width:680px){
     .container {
         width: 50%;
     }
 }
-@media screen and (min-width:680px){
-    .container {
-        width: 50%;
-    }
-}
+
 @media screen and (min-width:800px){
     .container {
         width: 40%;
     }
 }
+
 @media screen and (min-width:1040px){
     .container {
         width: 30%;
