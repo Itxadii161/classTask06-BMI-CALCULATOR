@@ -10,10 +10,12 @@
     <div class="container">
         <h1>BMI Calculator</h1>
         <div class="input-container">
-            WEIGHT: <input type="number" id="weight" placeholder="Enter your weight in kg" required>
+            <span>WEIGHT:</span>
+            <input type="number" id="weight" placeholder="Enter your weight in kg" required>
         </div>
         <div class="input-container">
-            HEIGHT: <input type="number" id="height" placeholder="Enter your height in m" required>
+          <span>HEIGHT:</span>  
+          <input type="number" id="height" placeholder="Enter your height in m" required>
         </div>
         <button id="calculate-btn" onclick="calculateBMI()">Calculate BMI</button>
         <div id="output"></div>
