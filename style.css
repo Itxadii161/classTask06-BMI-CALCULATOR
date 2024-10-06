@@ -31,7 +31,7 @@ input {
 }
 
 button {
-    width: 99%;
+    width: 100%;
     margin-left: 1%;
     padding: 10px;
     background-color: #000000;
@@ -50,7 +50,11 @@ button:hover {
     text-align: center;
     font-size: 18px;
 }
-
+@media screen and (min-width:680px){
+    .container {
+        width: 50%;
+    }
+}
 @media screen and (min-width:680px){
     .container {
         width: 50%;
